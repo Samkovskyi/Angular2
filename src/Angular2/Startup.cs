@@ -59,7 +59,7 @@ namespace Angular2
             services.AddScoped<IList, List<int>>();
             services.AddGlimpse();
             services.AddMvc();
-
+            
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
@@ -95,6 +95,8 @@ namespace Angular2
                 }
                 catch { }
             }
+
+            
 
             app.UseIISPlatformHandler(options => options.AuthenticationDescriptions.Clear());
 
